@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chasi.NewPage1"
+             >
+
+    <StackLayout Padding="10" VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="Секундомер" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <Label x:Name="TimerLabel" FontSize="60" TextColor="#FF5733" HorizontalOptions="Center" />
+
+        <Button x:Name="StartButton" Text="Старт" Clicked="OnStartClicked" />
+        <Button x:Name="StopButton" Text="Стоп" Clicked="OnStopClicked" IsEnabled="False" />
+        <Button x:Name="ResetButton" Text="Сброс" Clicked="OnResetClicked" IsEnabled="False" />
+
+        <Button x:Name="LapButton" Text="Запомнить время" Clicked="OnLapClicked" IsEnabled="False" />
+
+        <Label Text="Запомненные времена:" FontSize="20" HorizontalOptions="Center" />
+        <ListView x:Name="LapsListView" />
+    </StackLayout>
+
+</ContentPage>

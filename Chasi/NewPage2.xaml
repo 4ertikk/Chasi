@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chasi.NewPage2"
+             >
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        
+        <Label Text="Установите время" FontSize="24" HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry x:Name="HoursEntry" Placeholder="Часы" Keyboard="Numeric" WidthRequest="80" />
+            <Entry x:Name="MinutesEntry" Placeholder="Минуты" Keyboard="Numeric" WidthRequest="80" />
+            <Entry x:Name="SecondsEntry" Placeholder="Секунды" Keyboard="Numeric" WidthRequest="80" />
+        </StackLayout>
+        <Button Text="Запустить таймер" Clicked="Button_Clicked" Margin="5" BackgroundColor="#4CAF50" TextColor="White"/>
+        <Button Text="Остановить" Clicked="Button_Clicked_1" Margin="5" BackgroundColor="#F44336" TextColor="White"/>
+        <Button Text="Завершить" Clicked="Button_Clicked_2" Margin="5" BackgroundColor="MediumBlue" TextColor="White"/>
+        <Label x:Name="TimerLabel" FontSize="40" HorizontalOptions="Center" />
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chasi.NewPage3"
+             >
+
+    <StackLayout Padding="30">
+        <Label Text="Выберите день недели:" 
+               FontSize="Medium" 
+               HorizontalOptions="Center" />
+
+        <StackLayout x:Name="daysPanel" Orientation="Vertical">
+            <RadioButton GroupName="days" Content="Понедельник" Value="Понедельник" />
+            <RadioButton GroupName="days" Content="Вторник" Value="Вторник" />
+            <RadioButton GroupName="days" Content="Среда" Value="Среда" />
+            <RadioButton GroupName="days" Content="Четверг" Value="Четверг" />
+            <RadioButton GroupName="days" Content="Пятница" Value="Пятница" />
+            <RadioButton GroupName="days" Content="Суббота" Value="Суббота" />
+            <RadioButton GroupName="days" Content="Воскресенье" Value="Воскресенье" />
+        </StackLayout>
+
+        <Label Text="Выберите время будильника:" 
+               FontSize="Medium" 
+               HorizontalOptions="Center" />
+        <TimePicker x:Name="timePicker" 
+                    Time="07:00" 
+                    Format="T"
+                    HorizontalOptions="Center" />
+
+        <Button Text="Установить будильник" 
+                Clicked="OnSetAlarmClicked" 
+                HorizontalOptions="Center" />
+    </StackLayout>
+
+</ContentPage>
